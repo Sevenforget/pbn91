@@ -1,21 +1,26 @@
-import type React from "react"
-import "@/app/globals.css"
-import { Inter } from "next/font/google"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
+import type React from "react";
+import "@/app/globals.css";
+import { Inter } from "next/font/google";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "일상의 조각들 - 개인 블로그",
   description: "일상 경험을 공유하는 개인 블로그입니다.",
-    generator: 'v0.dev'
-}
+  generator: "v0.dev",
+  verification: {
+    other: {
+      "naver-site-verification": "fb9220ff470dcff513bd326f34bf689cb679103f",
+    },
+  },
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="ko">
@@ -28,5 +33,5 @@ export default function RootLayout({
         </div>
       </body>
     </html>
-  )
+  );
 }
